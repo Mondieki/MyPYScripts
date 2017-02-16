@@ -1,8 +1,8 @@
 import os
 import shutil
 
-root_src_dir = r'C:\Audio'                                          #Path to Source Directory
-root_dst_dir = 'C:\AudioBackUp'                                     #Location Of Back up directory
+root_src_dir = r'#'                                                 #Path to Source Directory
+root_dst_dir = '#'                                                  #Location Of Back up directory
 
 """Merge directories if they already exist. If they don't make them. """
 for src_dir, dirs, files in os.walk(root_src_dir):
@@ -15,3 +15,5 @@ for src_dir, dirs, files in os.walk(root_src_dir):
         if os.path.exists(dst_file):                                #If the file alreaddy exists, overwrite it with the new copied file.
             os.remove(dst_file)                                     #Delete the old file
         shutil.move(src_file, dst_dir)                              #Copy the new file unliminet
+
+print("Files and folders have been moved successfully!")
