@@ -1,14 +1,14 @@
 import os
 import sqlite3
 import time
-import admin
-if not admin.isUserAdmin():
-        admin.runAsAdmin()
+#import admin
+#if not admin.isUserAdmin():
+#        admin.runAsAdmin()
 
-os.chdir(r"C:\Users\mondi\Desktop\PY")##Location of DB
+os.chdir(r"/Users/MikeOndieki/Documents/Projects/MyPYScripts")              #Database's location
 conn = sqlite3.connect('stations.db')
 cursor=conn.execute("SELECT * FROM Stations")
-os.chdir(r"C:\Users\mondi\Desktop\PY\audio2")#directory containing list of radio stations ##FM in place of test
+os.chdir(r"/Users/MikeOndieki/Documents/Projects/MyPYScripts/audio")        #directory containing list of radio stations
 
 """Renames from '#LOGGER' to 'STATION NAME' """
 for row in cursor:
@@ -17,7 +17,7 @@ for row in cursor:
     station_list=os.listdir()
     for station_name in station_list:
         if station_name.strip()[6:]==StationID:
-            os.rename(station_name,StationName)#renaming logger1--> RadioAsia and so on
+            os.rename(station_name,StationName)                             #renames log folders to their respective Station names: i.e logger1--> RadioAsia and so on
 
 """Renames from '#LOG_DAY_NUMBER' to 'LOG_DATE'"""
 def rename_logDays():

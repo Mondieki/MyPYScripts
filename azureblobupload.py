@@ -7,7 +7,7 @@ from os.path import isfile, join
 ACCOUNT_NAME = "mzikitrak"
 ACCOUNT_KEY = "gyog7nR4e0L9DMWNXhyaSm1J6ycwgsBI33f9aQUcKbYMPSacVvjYxQSVFrpC/QK8K+3aFmdGxVXN6DSmFwa5Pw=="
 CONTAINER_NAME = "mzikitrak-fmaudio"
-LOCAL_DIRECT = r"C:\Users\mondi\Desktop\PY\Test"        
+LOCAL_DIRECT = r"C:\Users\mondi\Desktop\PY\Test"                                                            #Location of folders t be uploaded.    
 
 blob_service = BlobService(account_name=ACCOUNT_NAME, account_key=ACCOUNT_KEY)
 # find all files in the LOCAL_DIRECT (excluding directory)
